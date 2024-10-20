@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar Styles */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #9e4848;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+nav .logo {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+    background-color: #fff;
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+}
+nav ul.burger-active {
+    display: none;
+    flex-direction: column;
+}
+
+/* Section Styles */
+header, section, footer {
+    padding: 100px 50px;
+    text-align: center;
+}
+header img {
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 20px 20px 15px rgba(66, 23, 23, 0.986);
+}
+
+.skills, .projects, .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skills div, .projects div, .contact div {
+    flex: 1 1 300px;
+    margin: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(66, 23, 23, 0.986);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    background-color: #9e4848;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        flex-direction: column;
+        width: 150px;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    nav ul.burger-active {
+        display: flex;
+    }
+    .burger {
+        display: flex;
+    }
+    .skills, .projects, .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+}
